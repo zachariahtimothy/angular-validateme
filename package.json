@@ -1,0 +1,37 @@
+{
+  "name": "angular-validateme",
+  "version": "0.0.1",
+  "description": "Inline, per-field validation for Angular using the internal Angular and browser validation. Prevents you from needing to add markup manually for each element requiring validation. Customizable but designed for Bootstrap form validation.",
+  "main": "angular-validateme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zachariahtimothy/angular-validateme.git"
+  },
+  "author": "Zach Curtis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachariahtimothy/angular-validateme/issues"
+  },
+  "homepage": "https://github.com/zachariahtimothy/angular-validateme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-compress": "^0.12.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-jade": "^0.13.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jsdoc": "^0.5.7",
+    "grunt-replace": "^0.7.9",
+    "grunt-shell": "^1.1.1",
+    "load-grunt-tasks": "^0.6.0",
+    "marked": "^0.3.2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "angular-validateme",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zachariahtimothy/angular-validateme",
+  "authors": [
+    "Zach Curtis <zachariahtimothy@gmail.com>"
+  ],
+  "description": "Inline, per-field validation for Angular using the internal Angular and browser validation. Prevents you from needing to add markup manually for each element requiring validation. Customizable but designed for Bootstrap form validation.",
+  "main": "dist/angular-validateme.js",
+  "keywords": [
+    "angular",
+    "validation",
+    "bootstrap"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "Gruntfile.js",
+    "index.html",
+    "jsdoc.conf.json",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.x"
+  }
+}

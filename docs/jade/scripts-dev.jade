@@ -1,0 +1,29 @@
+//theme: Bootstrap 3
+link(ng-repeat="c in css", ng-href="{{c}}", rel="stylesheet", media="screen")
+//link(href="libs/bootstrap/dist/css/bootstrap.css", rel="stylesheet", media="screen")
+//link(href="libs/bootstrap/dist/css/bootstrap-responsive.css", rel="stylesheet", media="screen")
+
+//docs css
+link(href="docs/css/docs.css", rel="stylesheet", media="screen")
+
+//jquery (needed for bootstrap)? for dev include before angular!
+script(src="libs/jquery/dist/jquery.js")
+
+//angular
+script(src='libs/angular/angular.js')
+script(src='libs/angular-mocks/angular-mocks.js')
+
+//bootstrap
+script(src="libs/bootstrap/dist/js/bootstrap.js")
+
+//google-code-prettify
+script(src='libs/google-code-prettify/bin/run_prettify.min.js')
+
+//app
+script(src='docs/js/app.js')
+
+//angular-validateme
+script(src='src/module.js')
+script(src='src/provider.js')
+script(src='src/service.js')
+script(src='src/directive.js')
