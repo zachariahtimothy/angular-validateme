@@ -22,7 +22,12 @@
     "Gruntfile.js",
     "index.html",
     "jsdoc.conf.json",
-    "package.json"
+    "package.json",
+    "zip",
+    "dev.html",
+    "docs",
+    "libs",
+    "src"
   ],
   "dependencies": {
     "angular": "~1.x"
