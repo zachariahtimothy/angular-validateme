@@ -68,74 +68,42 @@
 
           <h4>Dependencies</h4><p>Basically it does not depend on any libraries except <a href="http://angularjs.org">AngularJS</a> itself.<br>For validation theming to appear properly out of the box, you will need to include <a href="http://getbootstrap.com">Twitter Bootstrap</a> CSS.  </p>
 
-          <h4>Features</h4>
-          <table style="width: 50%; min-width: 200px">
-            <tr>
-              <td style="width: 50%; vertical-align: top"><ul>
-<li><a href="#text-simple">text</a>        </li>
-<li><a href="#textarea">textarea</a></li>
-<li><a href="#select-local">select</a></li>
-<li><a href="#checklist">checkbox</a></li>
-<li><a href="#radiolist">radio</a></li>
-<li><a href="#bsdate">date</a></li>
-<li><a href="#bstime">time</a></li>
-<li><a href="#html5-inputs">html5 inputs</a>        </li>
-<li><a href="#typeahead">typeahead</a></li>
-</ul>
+          <h4>Features</h4><p>Allows you to utilize the built-in Angular validation with the goodness of Bootstrap validation styling.<br>I was frustrated by the idea of adding 4 <span>&#39;s for every element I wanted to validate, specially because many of them are identical.  Now you can skip the manual addition of error handling if you are using the built-in Angular validations (like ng-minlength=&quot;2&quot;).  If you write a directive for custom validation, no problem! Simply add those custom <span>&#39;s and enjoy a better life.</p>
 
-              </td>
-              <td style="width: 50%; vertical-align: top"><ul>
-<li><a href="#editable-form">complex form</a></li>
-<li><a href="#editable-row">editable row</a></li>
-<li><a href="#editable-column">editable column</a></li>
-<li><a href="#editable-table">editable table</a></li>
-<li><a href="#themes">themes</a></li>
-</ul>
-
-              </td>
-            </tr>
-          </table>
           <section id="getstarted"></section>
           <h1>Get started</h1>
           <!-- jade cannot include dynamically-->
           <ol>
             <li> <p>Include <a href="http://angularjs.org">Angular.js</a> in your project</p>
 
-              <pre class="prettyprint">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js&quot;&gt;&lt;/script&gt;</pre><p>Optionally include <a href="http://getbootstrap.com">Bootstrap</a> CSS for theming</p>
+              <pre class="prettyprint">&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js&quot;&gt;&lt;/script&gt;</pre><p>Optionally include <a href="http://getbootstrap.com">Bootstrap</a> CSS for theming</p>
 
-              <pre class="prettyprint">&lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
+              <pre class="prettyprint">&lt;link href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</pre>
             </li>
-            <li> <span>Install angular-xeditable via </span><a href="http://bower.io" target="_blank">bower</a><span> or  </span><a href="zip/angular-xeditable-0.0.1.zip">download latest zip    </a>
-              <pre class="prettyprint">bower install angular-xeditable </pre>
+            <li> <span>Install angular-validateme via </span><a href="http://bower.io" target="_blank">bower</a><span> or  </span><a href="zip/angular-validateme-0.0.1.zip">download latest zip    </a>
+              <pre class="prettyprint">bower install angular-validateme </pre>
             </li>
-            <li>Include angular-xeditable into your project
-              <pre class="prettyprint">&lt;link href=&quot;bower_components/angular-xeditable/dist/css/xeditable.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;script src=&quot;bower_components/angular-xeditable/dist/js/xeditable.js&quot;&gt;&lt;/script&gt;</pre>
+            <li>Include angular-validateme into your project
+              <pre class="prettyprint">&lt;script src=&quot;bower_components/angular-validateme/dist/js/validateme.js&quot;&gt;&lt;/script&gt;</pre>
             </li>
-            <li>Define angular app and add "xeditable" to dependencies
+            <li>Define angular app and add "validateme" to dependencies
               <pre class="prettyprint">&lt;html ng-app=&quot;app&quot;&gt;</pre>
-              <pre class="prettyprint">var app = angular.module("app", ["xeditable"]);</pre>
+              <pre class="prettyprint">var app = angular.module("app", ["validateMe"]);</pre>
             </li>
-            <li>Set theme in app.run:
-              <pre class="prettyprint">app.run(function(editableOptions) {
-  editableOptions.theme = 'bs3'; // bootstrap3 theme. Can be also 'bs2', 'default'
+            <li>Optionallly override styles or validation messaging in app.config.:
+              <pre class="prettyprint">app.config(function(validationOptionsProvider) {
+  validationOptionsProvider.containerClasses.success = 'yep-success';
+  validationOptionsProvider.validationElement.setMessage('required', 'FOOL! You must fill this out or pay the price!');
 });
 </pre>
             </li>
             <li>Markup element that should be editable 
               <pre ng-non-bindable class="prettyprint">&lt;div ng-controller=&quot;Ctrl&quot;&gt;
-  &lt;a href=&quot;#&quot; editable-text=&quot;user.name&quot;&gt;{{ user.name || &quot;empty&quot; }}&lt;/a&gt;
+  &lt;input type=&quot;text&quot; name=&quot;myfield&quot; ng-minlength=&quot;5&quot; validateme&gt;
 &lt;/div&gt;</pre>
             </li>
-            <li>Define controller
-              <pre class="prettyprint">app.controller('Ctrl', function($scope) {
-  $scope.user = {
-    name: 'awesome user'
-  };  
-});</pre>
-            </li>
-            <li>Enjoy!
-              <div style="padding-top: 5px">   <a href="starter" target="_blank" class="btn btn-success">View starter template</a><a href="zip/angular-xeditable-starter.zip" style="margin-left: 10px" class="btn btn-primary">Download starter zip</a></div>
+            <li>Sleep well knowing your entries are valid!
+              <div style="padding-top: 5px"></div>
             </li>
           </ol>
         </div>
@@ -146,5 +114,7 @@
 
       <p>&copy; Forward Motion Consulting 2014. Released under the MIT license.</p>
     </footer>
+    <!--if env == 'prod'//include analytics.html
+    -->
   </body>
 </html>

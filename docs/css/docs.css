@@ -3,8 +3,8 @@ body {
 }
 
 .navbar-brand {
-  background: url("../img/angular32.jpeg") left center no-repeat;
-  padding-left: 38px;
+  background: url("../images/logo.png") left center no-repeat;
+  padding-left: 55px;
   margin-left: 0 !important;
 }
 

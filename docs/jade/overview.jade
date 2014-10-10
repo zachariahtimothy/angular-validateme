@@ -7,24 +7,6 @@ h4 Dependencies
   For validation theming to appear properly out of the box, you will need to include [Twitter Bootstrap](http://getbootstrap.com) CSS.  
 
 h4 Features
-table(style="width: 50%; min-width: 200px")
-  tr
-    td(style="width: 50%; vertical-align: top")
-      :markdown
-        * [text](#text-simple)        
-        * [textarea](#textarea)
-        * [select](#select-local)
-        * [checkbox](#checklist)
-        * [radio](#radiolist)
-        * [date](#bsdate)
-        * [time](#bstime)
-        * [html5 inputs](#html5-inputs)        
-        * [typeahead](#typeahead)
-
-    td(style="width: 50%; vertical-align: top")
-      :markdown
-        * [complex form](#editable-form)
-        * [editable row](#editable-row)
-        * [editable column](#editable-column)
-        * [editable table](#editable-table)
-        * [themes](#themes)
+:markdown
+  Allows you to utilize the built-in Angular validation with the goodness of Bootstrap validation styling.  
+  I was frustrated by the idea of adding 4 <span>'s for every element I wanted to validate, specially because many of them are identical.  Now you can skip the manual addition of error handling if you are using the built-in Angular validations (like ng-minlength="2").  If you write a directive for custom validation, no problem! Simply add those custom <span>'s and enjoy a better life.

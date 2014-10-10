@@ -40,6 +40,10 @@ angular.module('validateMe')
 		return angular.element('<' + choice.type + ' class="help-block text-danger ' + errorTag + '">' + choice.message + '</' + choice.type + '>');
 	};
 
+	this.validationElement.prototype.setMessage = function (key, message) {
+		
+	};
+
 	this.$get = function () {
 		return {
 			containerClasses: this.containerClasses,
