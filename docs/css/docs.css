@@ -4,6 +4,12 @@
   margin-left: 0 !important;
 }
 
+#socials .twitter-share-button {
+  display:inline-block;
+  width: 70px !important;
+  vertical-align:top;
+}
+
 @media screen and (max-width: 750px) {
   .sidebar {
     position: static;
