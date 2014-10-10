@@ -1,5 +1,5 @@
 /*!
-angular-validateme - 0.0.1
+angular-validateme - 0.0.3
 Inline, per-field validation for Angular using the internal Angular and browser validation. Prevents you from needing to add markup manually for each element requiring validation. Customizable but designed for Bootstrap form validation.
 Build date: 2014-10-10 
 */
