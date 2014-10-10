@@ -6,8 +6,11 @@
 
 #socials .twitter-share-button {
   display:inline-block;
-  width: 70px !important;
   vertical-align:top;
+}
+
+#socials .g-plusone {
+  width:60px !important;
 }
 
 @media screen and (max-width: 750px) {
