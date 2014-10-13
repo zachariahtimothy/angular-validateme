@@ -1,7 +1,7 @@
 /*!
-angular-validateme - 0.0.3
+angular-validateme - 0.0.4
 Inline, per-field validation for Angular using the internal Angular and browser validation. Prevents you from needing to add markup manually for each element requiring validation. Customizable but designed for Bootstrap form validation.
-Build date: 2014-10-10 
+Build date: 2014-10-13 
 */
 angular.module('validateMe', []);
 angular.module('validateMe')
@@ -103,8 +103,8 @@ angular.module('validateMe')
 });
 angular.module('validateMe')
 .service('validationService', ['validationOptions', function (validationOptions) {
-	var remove = function (item) {
-		item.remove();
+	var remove = function () {
+		this.remove();
 	};
 	
 	var showErrors = function (container, model) {
