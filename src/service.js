@@ -7,7 +7,6 @@ angular.module('validateMe')
 	var showErrors = function (container, model) {
 		for (var name in model.$error) {
 			var foundElement = container.find('.' + name);
-			console.log('foundElement',foundElement.length);
 			if (model.$error[name]) {
 				if (foundElement.length === 0) {
 					foundElement = new validationOptions.validationElement(name);
