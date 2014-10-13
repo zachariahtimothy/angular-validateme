@@ -1,7 +1,7 @@
 angular.module('validateMe')
 .service('validationService', ['validationOptions', function (validationOptions) {
-	var remove = function (item) {
-		item.remove();
+	var remove = function () {
+		this.remove();
 	};
 	
 	var showErrors = function (container, model) {
